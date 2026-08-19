@@ -1,0 +1,23 @@
+{
+  "preset": "earth-warm",
+  "wordmark": "Your Brand",
+  "name": "Earth Warm",
+  "note": "Humanist serif, clay, terracotta. Grounded.",
+  "fonts": {
+    "hero": "Lora",
+    "heroStretch": "normal",
+    "accent": "Lora",
+    "meta": "Montserrat"
+  },
+  "palette": {
+    "bg": "#E9DCC9",
+    "ink": "#3B2B20",
+    "accent": "#A8441F",
+    "light": "#F7EFE3"
+  },
+  "frame": true,
+  "scrim": "medium",
+  "textPosition": "top",
+  "case": "sentence",
+  "defaultSize": "1080x1350"
+}

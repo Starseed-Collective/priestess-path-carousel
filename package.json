@@ -1,0 +1,12 @@
+{
+  "name": "sacred-carousel",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Make on-brand Instagram carousels with Claude Code.",
+  "scripts": {
+    "build": "node scripts/generate.cjs",
+    "render": "node scripts/screenshot.cjs",
+    "check": "node scripts/check-brand.cjs"
+  },
+  "dependencies": { "puppeteer": "^25.0.0" }
+}

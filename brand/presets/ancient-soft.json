@@ -1,0 +1,23 @@
+{
+  "preset": "ancient-soft",
+  "wordmark": "Your Brand",
+  "name": "Ancient Soft",
+  "note": "High-contrast serif, warm stone, oxblood. Quiet and old.",
+  "fonts": {
+    "hero": "Cormorant Garamond",
+    "heroStretch": "normal",
+    "accent": "Cormorant Garamond",
+    "meta": "Montserrat"
+  },
+  "palette": {
+    "bg": "#EFE7DC",
+    "ink": "#3A2A24",
+    "accent": "#8C3A2E",
+    "light": "#F6F0E8"
+  },
+  "frame": false,
+  "scrim": "light",
+  "textPosition": "bottom",
+  "case": "sentence",
+  "defaultSize": "1080x1350"
+}

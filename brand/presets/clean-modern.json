@@ -1,0 +1,23 @@
+{
+  "preset": "clean-modern",
+  "wordmark": "Your Brand",
+  "name": "Clean Modern",
+  "note": "One sans, white, electric blue. Nothing decorative.",
+  "fonts": {
+    "hero": "Inter",
+    "heroStretch": "normal",
+    "accent": "Inter",
+    "meta": "Inter"
+  },
+  "palette": {
+    "bg": "#FFFFFF",
+    "ink": "#1A1A1A",
+    "accent": "#2E4CE0",
+    "light": "#FFFFFF"
+  },
+  "frame": false,
+  "scrim": "medium",
+  "textPosition": "top",
+  "case": "sentence",
+  "defaultSize": "1080x1350"
+}

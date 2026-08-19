@@ -1,0 +1,35 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "sacred-carousel brand",
+  "type": "object",
+  "required": ["name", "wordmark", "fonts", "palette"],
+  "properties": {
+    "name":     { "type": "string", "description": "Your brand name, plain." },
+    "wordmark": { "type": "string", "description": "How it appears small at the top of a slide." },
+    "fonts": {
+      "type": "object",
+      "required": ["hero", "accent"],
+      "properties": {
+        "hero":        { "type": "string", "description": "Google Font for big headlines." },
+        "heroStretch": { "enum": ["normal", "extra-condensed", "condensed"], "default": "normal" },
+        "accent":      { "type": "string", "description": "Google Font for softer italic lines." },
+        "meta":        { "type": "string", "description": "Google Font for small caps lines." }
+      }
+    },
+    "palette": {
+      "type": "object",
+      "required": ["bg", "ink", "accent"],
+      "properties": {
+        "bg":     { "type": "string", "pattern": "^#[0-9A-Fa-f]{6}$" },
+        "ink":    { "type": "string", "pattern": "^#[0-9A-Fa-f]{6}$" },
+        "accent": { "type": "string", "pattern": "^#[0-9A-Fa-f]{6}$" },
+        "light":  { "type": "string", "pattern": "^#[0-9A-Fa-f]{6}$", "description": "Text colour over photos. Defaults to bg." }
+      }
+    },
+    "frame":        { "type": "boolean", "default": true },
+    "scrim":        { "enum": ["light", "medium", "heavy"], "default": "medium" },
+    "textPosition": { "enum": ["top", "center", "bottom"], "default": "top" },
+    "case":         { "enum": ["sentence", "upper"], "default": "sentence" },
+    "defaultSize":  { "enum": ["1080x1350", "1080x1920", "1080x1080"], "default": "1080x1350" }
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "preset": "night-cosmic",
+  "wordmark": "Your Brand",
+  "name": "Night Cosmic",
+  "note": "Deep indigo, silver, lilac. Late and dreamy.",
+  "fonts": {
+    "hero": "Playfair Display",
+    "heroStretch": "normal",
+    "accent": "Cormorant Garamond",
+    "meta": "Montserrat"
+  },
+  "palette": {
+    "bg": "#14132B",
+    "ink": "#EDEAF5",
+    "accent": "#B79BE8",
+    "light": "#F3F0FA"
+  },
+  "frame": true,
+  "scrim": "heavy",
+  "textPosition": "center",
+  "case": "sentence",
+  "defaultSize": "1080x1350"
+}

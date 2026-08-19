@@ -1,0 +1,66 @@
+{
+  "campaign": "demo",
+  "size": "1080x1350",
+  "note": "Placeholder copy. Replace every line with your own. The photos here are generated placeholders, not real images.",
+  "slides": [
+    {
+      "id": "01-hook",
+      "photo": "photos/01-dawn.jpg",
+      "crop": "center 28%",
+      "head": "You are not *behind.*",
+      "sub": "You are just early in something most people never start at all."
+    },
+    {
+      "id": "02-turn",
+      "photo": "photos/02-stone.jpg",
+      "crop": "center 30%",
+      "eyebrow": false,
+      "kicker": "Here is what actually happened.",
+      "head": "You have been told to *work harder.*",
+      "sub": "So you did. And it made the days longer without making them clearer."
+    },
+    {
+      "id": "03-problem",
+      "photo": "photos/03-dusk.jpg",
+      "crop": "center 24%",
+      "eyebrow": false,
+      "head": "The bottleneck was never *effort.*",
+      "sub": "It was that nothing had a shape yet, so every day started from nothing."
+    },
+    {
+      "id": "04-list",
+      "photo": "photos/04-clay.jpg",
+      "crop": "center 32%",
+      "eyebrow": false,
+      "head": "What changes when it has a shape:",
+      "list": [
+        "you stop deciding the same thing twice",
+        "the work survives a bad week",
+        "you can hand a piece of it to someone else",
+        "you can see what is missing"
+      ],
+      "close": "None of that requires *more hours.*"
+    },
+    {
+      "id": "05-solid",
+      "head": "A slide with no photo works too.",
+      "sub": "Leave *photo* out and it uses your background colour instead. Useful for a quote, a definition, or a breath between images."
+    },
+    {
+      "id": "06-proof",
+      "photo": "photos/05-deep.jpg",
+      "crop": "center 26%",
+      "eyebrow": false,
+      "head": "Start with *one* thing you repeat.",
+      "sub": "Not the whole system. The single move you already make every week, written down once so you never rebuild it."
+    },
+    {
+      "id": "07-cta",
+      "photo": "photos/01-dawn.jpg",
+      "crop": "center 34%",
+      "head": "Pick the one thing.",
+      "sub": "Write it down today. That is the whole assignment.",
+      "cta": "Save this for the week you need it."
+    }
+  ]
+}

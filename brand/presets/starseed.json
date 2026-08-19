@@ -1,0 +1,23 @@
+{
+  "preset": "starseed",
+  "wordmark": "Your Brand",
+  "name": "Starseed",
+  "note": "Condensed serif, cream, hot pink. Vanessa's own.",
+  "fonts": {
+    "hero": "Noto Serif Display",
+    "heroStretch": "extra-condensed",
+    "accent": "Playfair Display",
+    "meta": "Montserrat"
+  },
+  "palette": {
+    "bg": "#F5F0E6",
+    "ink": "#2A1410",
+    "accent": "#E8218A",
+    "light": "#F7F1E7"
+  },
+  "frame": true,
+  "scrim": "medium",
+  "textPosition": "top",
+  "case": "sentence",
+  "defaultSize": "1080x1350"
+}

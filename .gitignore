@@ -1,0 +1,11 @@
+node_modules/
+my-brand.json
+my-carousels/
+.DS_Store
+
+# rendered working files
+**/output/
+brand/gallery/*.html
+
+# but the style gallery images are the picker, they ship
+!brand/gallery/*.jpg

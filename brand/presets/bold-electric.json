@@ -1,0 +1,23 @@
+{
+  "preset": "bold-electric",
+  "wordmark": "Your Brand",
+  "name": "Bold Electric",
+  "note": "Heavy display caps, near black, acid green. Loud.",
+  "fonts": {
+    "hero": "Anton",
+    "heroStretch": "normal",
+    "accent": "Inter",
+    "meta": "Inter"
+  },
+  "palette": {
+    "bg": "#0E0E10",
+    "ink": "#F2F2F2",
+    "accent": "#C6FF3D",
+    "light": "#FFFFFF"
+  },
+  "frame": false,
+  "scrim": "heavy",
+  "textPosition": "bottom",
+  "case": "upper",
+  "defaultSize": "1080x1350"
+}
