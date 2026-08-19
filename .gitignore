@@ -9,3 +9,7 @@ brand/gallery/*.html
 
 # but the style gallery images are the picker, they ship
 !brand/gallery/*.jpg
+
+# generated slide HTML (regenerated from slides.json every run)
+*-[0-9][0-9][0-9]x[0-9][0-9][0-9].html
+*-[0-9][0-9][0-9][0-9]x[0-9][0-9][0-9][0-9].html
