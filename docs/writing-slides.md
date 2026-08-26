@@ -34,6 +34,36 @@ Ten slides is plenty. Seven is often better.
 | `crop` | where the photo sits, e.g. `center 30%` |
 | `eyebrow` | `false` to hide the wordmark on this slide |
 | `headSize` | override the automatic headline size |
+| `mode` | `"body"` for a text-heavy slide under a flat wash |
+| `body` | array of paragraphs, body mode only |
+| `handle` | your @name, centred at the bottom |
+
+## Two kinds of slide
+
+**Statement slides** are the default. A headline over a live photo, with the
+shadow behind the words only, so the picture stays a picture.
+
+**Body slides** are for when you have real paragraphs to say. Set
+`"mode": "body"` and the photo goes under a flat wash so long copy stays
+readable. The picture becomes texture instead of subject. That is the trade,
+and it is the right trade when the words are the point.
+
+```json
+{ "id": "02", "mode": "body", "photo": "photos/x.jpg",
+  "eyebrow": false,
+  "body": [
+    "First paragraph.",
+    "Second paragraph.",
+    "Third."
+  ],
+  "handle": "@yourhandle" }
+```
+
+`bodySize` changes the text size, `washOpacity` how much photo shows through
+(0.82 by default, lower shows more picture).
+
+Do not use body slides for everything. Two or three in a carousel is plenty,
+or the whole set stops feeling like photography.
 
 ## Accent words
 
