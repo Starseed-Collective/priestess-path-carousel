@@ -16,6 +16,13 @@ Two things to have open:
 2. **A Finder window on `demo-photos/`**, so you can show the four real photos
    you are about to use.
 
+If you want to show them how THEY get it, the line to read out is:
+
+> Set up my carousel skill from https://github.com/Starseed-Collective/priestess-path-carousel
+
+Do not actually run it on the call. You already have it, and re-cloning mid-demo
+wastes two minutes for no payoff. Just show them the sentence.
+
 Do not run the demo through beforehand. The brand setup only happens on a first
 run and it is the best part.
 

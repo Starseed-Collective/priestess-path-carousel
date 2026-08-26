@@ -12,19 +12,25 @@ you post it.
 
 - **Claude Code**
 - **Node**, which you probably already have. If not, one installer from
-  [nodejs.org](https://nodejs.org), double-clicked.
+  [nodejs.org](https://nodejs.org), double-clicked. It is the only thing Claude
+  cannot install for you.
 
 That is it. You will not type a single command. Claude runs all of them.
 
 ## Getting started
 
-1. Download this folder. (Green **Code** button above, then **Download ZIP**,
-   then unzip it somewhere you can find again, like Documents.)
-2. Open that folder in Claude Code.
-3. Say: **"set up my carousel skill"**
-4. Say: **"set up my brand"**
+Open Claude Code and paste this:
 
-Step 4 asks you three ways to define your look. Pick whichever is easiest:
+> Set up my carousel skill from https://github.com/Starseed-Collective/priestess-path-carousel
+
+That is the whole thing. Claude downloads it, installs what it needs, and then
+asks you about your look. You will not type a command or touch a terminal.
+
+Then say:
+
+> set up my brand
+
+It offers three ways to define your look. Pick whichever is easiest:
 
 - **Show me styles.** You see six and point at one. Ten seconds.
 - **I'll show you what I like.** You drop in a few pictures you love, a Pinterest
@@ -32,6 +38,13 @@ Step 4 asks you three ways to define your look. Pick whichever is easiest:
 - **I know my brand.** You have hex codes and font names and you hand them over.
 
 It saves your answer. You are never asked again.
+
+<details>
+<summary>Prefer to download it by hand?</summary>
+
+Green **Code** button above, then **Download ZIP**, unzip somewhere you can find
+again, and open that folder in Claude Code. Same thing, more steps.
+</details>
 
 ## Making a carousel
 
