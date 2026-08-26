@@ -53,7 +53,8 @@ function slideHtml(slide, brand, sizeKey) {
   // Accent colours sit in a mid-tone band, so on photos they get a hairline
   // dark edge. Without this an accent word disappears over a bright patch.
   const accentEdge = onPhoto
-    ? `-webkit-text-stroke:1px rgba(0,0,0,.5);paint-order:stroke fill;`
+    ? `-webkit-text-stroke:1.4px rgba(0,0,0,.62);paint-order:stroke fill;` +
+      `text-shadow:0 1px 2px rgba(0,0,0,.95), 0 2px 9px rgba(0,0,0,.75), 0 3px 20px rgba(0,0,0,.5);`
     : '';
 
   const parts = [];

@@ -76,18 +76,21 @@ function scrimGradient(brand, size, slide) {
   const depth = copyDepth(slide);
   const topPct = ((size.safeTop + 40) / size.h) * 100;
   const blockH = 14 + depth * 46;              // how tall the words really are
-  const ry = Math.round(blockH * 0.62);        // fade out just past them
+  // A close or cta line is the last thing on the slide and the thing that must
+  // be read. Let the shadow run past it rather than fade underneath it.
+  const tail = (slide && (slide.cta || slide.close)) ? 0.92 : 0.78;
+  const ry = Math.round(blockH * tail);
   const tall = size.h >= 1900 ? 0.88 : 1;
 
   if (pos === 'bottom') {
     const cy = Math.round(100 - topPct - blockH / 2);
-    return `radial-gradient(ellipse 96% ${Math.round(ry * tall)}% at 34% ${cy}%, ${rgba(s.a)} 0%, ${rgba(s.b)} 46%, ${rgba(s.c)} 72%, transparent 94%)`;
+    return `radial-gradient(ellipse 96% ${Math.round(ry * tall)}% at 34% ${cy}%, ${rgba(s.a)} 0%, ${rgba(s.b)} 56%, ${rgba(s.c)} 81%, transparent 97%)`;
   }
   if (pos === 'center') {
-    return `radial-gradient(ellipse 92% ${Math.round(ry * 1.25 * tall)}% at 50% 50%, ${rgba(s.a)} 0%, ${rgba(s.b)} 46%, ${rgba(s.c)} 72%, transparent 94%)`;
+    return `radial-gradient(ellipse 92% ${Math.round(ry * 1.25 * tall)}% at 50% 50%, ${rgba(s.a)} 0%, ${rgba(s.b)} 56%, ${rgba(s.c)} 81%, transparent 97%)`;
   }
   const cy = Math.round(topPct + blockH / 2);
-  return `radial-gradient(ellipse 96% ${Math.round(ry * tall)}% at 34% ${cy}%, ${rgba(s.a)} 0%, ${rgba(s.b)} 46%, ${rgba(s.c)} 72%, transparent 94%)`;
+  return `radial-gradient(ellipse 96% ${Math.round(ry * tall)}% at 34% ${cy}%, ${rgba(s.a)} 0%, ${rgba(s.b)} 56%, ${rgba(s.c)} 81%, transparent 97%)`;
 }
 
 // A very dark version of a brand colour, so the scrim feels like the same
