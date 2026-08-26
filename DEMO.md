@@ -3,24 +3,21 @@
 Read this once before you start. It takes 5 minutes to set up and about
 8 minutes to demo.
 
-## Before the call (do this now, not live)
+## Before the call
 
-1. Open Terminal. Paste this one line and press return:
+**Nothing to install. It is already done on this machine.**
 
-   ```
-   cd ~/Projects/priestess-path-carousel && npm install && npx puppeteer browsers install chrome
-   ```
+Puppeteer is installed, Chrome is downloaded, and a test slide rendered
+successfully. You do not need a terminal and you will not use one.
 
-   It should end without a red error. This is the only slow part and you never
-   want it happening while people watch.
+Two things to have open:
 
-2. Open the folder in Claude Code.
+1. **Claude Code, pointed at this folder** (`~/Projects/priestess-path-carousel`).
+2. **A Finder window on `demo-photos/`**, so you can show the four real photos
+   you are about to use.
 
-3. Have `demo-photos/` open in Finder in another window. Four real photos of you
-   are already in there.
-
-That is it. Do not run the demo all the way through beforehand, because the
-brand setup only happens on a first run and it is the best part.
+Do not run the demo through beforehand. The brand setup only happens on a first
+run and it is the best part.
 
 ## The demo, in order
 
@@ -88,11 +85,10 @@ the pictures" and let Claude fix it. Takes ten seconds. Do not read the error ou
 **It is slow** — talk while it works. Say what it is doing: picking the photo,
 setting the crop, checking the heads are not cut off.
 
-**Something breaks badly** — you already have finished images to fall back on:
+**Something breaks badly** - you already have finished images to fall back on.
+Just ask Claude:
 
-```
-open ~/Projects/priestess-path-carousel/examples/demo-carousel/output
-```
+> open the finished demo images
 
 Show those instead and say "here is one I made earlier." Nobody minds.
 
