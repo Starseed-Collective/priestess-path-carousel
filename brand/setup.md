@@ -41,7 +41,17 @@ Change `palette.accent` and show her the same slide again.
 ## Door 2: she shows you what she likes
 
 She drops in two or three images: carousels she loves, her own brand photos,
-her website, a Pinterest save. Look at them and pull out:
+her website, a Pinterest save.
+
+**Measure the colours, do not guess them.** Save the images somewhere and run:
+
+```
+node scripts/palette-from.cjs <image> [<image> ...]
+```
+
+It reports a suggested background, text and accent, plus the standout colour
+and how much of each picture it covers. Use those numbers as the starting
+palette. Then look at the images yourself and pull out the rest:
 
 - three colours: background, text, accent
 - type character: high-contrast serif, condensed serif, soft serif, humanist
@@ -57,8 +67,8 @@ Two things to say out loud, once, so she is not surprised later:
 > I can match the feeling of a font, not the exact font. If yours is a paid one
 > I will get you the closest free match.
 
-> I am reading the colours by eye, so we may need one round of "warmer" or
-> "deeper" to land it.
+> I am reading the colours off the pictures, so we may still want one round of
+> "warmer" or "deeper" to land it.
 
 Then write `my-brand.json`, render ONE slide, and show her. Adjust until she
 says yes. Two rounds is normal.

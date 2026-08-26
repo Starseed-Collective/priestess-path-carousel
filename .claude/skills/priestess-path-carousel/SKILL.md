@@ -33,6 +33,11 @@ download the installer from nodejs.org, double-click it, and come back.
 If `my-brand.json` does not exist, run the setup in `brand/setup.md`.
 It offers three doors. Let them pick. Do not ask design questions.
 
+If they choose the "show me what you like" door, run
+`node scripts/palette-from.cjs <their images>` to measure the palette rather
+than eyeballing it. It finds the standout colour even when it covers only a
+small part of the frame.
+
 Once it exists, never ask again. Read it and move on.
 
 ## Step 2: photos before words
