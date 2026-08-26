@@ -70,21 +70,24 @@ function scrimGradient(brand, size, slide) {
   const rgba = v => `rgba(${r},${g},${b},${v})`;
   const pos = (slide && slide.textPosition) || brand.textPosition || 'top';
 
-  // The shadow is a soft ellipse sitting behind the copy block, not a curtain
-  // drawn across the picture. Sides and the far end of the photo stay bright,
-  // and a face placed away from the text stays in full light.
+  // The shadow hugs the copy block. Sizing it generously is how a face two
+  // thirds of the way down the slide ends up in shade for no reason, so this
+  // is deliberately tight: it fades out just past the last line of text.
   const depth = copyDepth(slide);
-  const ry = Math.round((20 + depth * 42) * (size.h >= 1900 ? 0.85 : 1));
+  const topPct = ((size.safeTop + 40) / size.h) * 100;
+  const blockH = 14 + depth * 46;              // how tall the words really are
+  const ry = Math.round(blockH * 0.62);        // fade out just past them
+  const tall = size.h >= 1900 ? 0.88 : 1;
 
   if (pos === 'bottom') {
-    const cy = 100 - Math.round(ry * 0.72);
-    return `radial-gradient(ellipse 96% ${ry}% at 34% ${cy}%, ${rgba(s.a)} 0%, ${rgba(s.b)} 44%, ${rgba(s.c)} 70%, transparent 92%)`;
+    const cy = Math.round(100 - topPct - blockH / 2);
+    return `radial-gradient(ellipse 96% ${Math.round(ry * tall)}% at 34% ${cy}%, ${rgba(s.a)} 0%, ${rgba(s.b)} 46%, ${rgba(s.c)} 72%, transparent 94%)`;
   }
   if (pos === 'center') {
-    return `radial-gradient(ellipse 92% ${Math.round(ry * 1.15)}% at 50% 50%, ${rgba(s.a)} 0%, ${rgba(s.b)} 44%, ${rgba(s.c)} 70%, transparent 92%)`;
+    return `radial-gradient(ellipse 92% ${Math.round(ry * 1.25 * tall)}% at 50% 50%, ${rgba(s.a)} 0%, ${rgba(s.b)} 46%, ${rgba(s.c)} 72%, transparent 94%)`;
   }
-  const cy = 14 + Math.round(ry * 0.66);
-  return `radial-gradient(ellipse 96% ${ry}% at 34% ${cy}%, ${rgba(s.a)} 0%, ${rgba(s.b)} 44%, ${rgba(s.c)} 70%, transparent 92%)`;
+  const cy = Math.round(topPct + blockH / 2);
+  return `radial-gradient(ellipse 96% ${Math.round(ry * tall)}% at 34% ${cy}%, ${rgba(s.a)} 0%, ${rgba(s.b)} 46%, ${rgba(s.c)} 72%, transparent 94%)`;
 }
 
 // A very dark version of a brand colour, so the scrim feels like the same
