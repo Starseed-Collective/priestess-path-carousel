@@ -52,7 +52,7 @@ function copyDepth(slide) {
   if (slide.kicker) w += 0.6;
   if (slide.head)   w += 1.4;
   if (slide.sub)    w += String(slide.sub).length / 90;
-  if (slide.list)   w += slide.list.length * 0.55;
+  if (slide.list)   w += slide.list.length * 0.62;
   if (slide.close)  w += 0.9;
   if (slide.cta)    w += 0.9;
   return Math.min(1, w / 6);
@@ -60,7 +60,7 @@ function copyDepth(slide) {
 
 function scrimGradient(brand, size, slide) {
   const s = SCRIM[brand.scrim || 'medium'];
-  const stretch = 1 + copyDepth(slide) * 0.55;
+  const stretch = 1 + copyDepth(slide) * 0.75;
   // Build the scrim from whichever brand colour is actually dark. A dark-
   // background brand has a LIGHT ink, and darkening that gives a grey wash
   // that does not hide anything.
@@ -68,17 +68,23 @@ function scrimGradient(brand, size, slide) {
   const base = luminance(p.bg) < luminance(p.ink) ? p.bg : p.ink;
   const [r, g, b] = hexToRgb(darken(base));
   const rgba = v => `rgba(${r},${g},${b},${v})`;
-  const pos = brand.textPosition || 'top';
+  const pos = (slide && slide.textPosition) || brand.textPosition || 'top';
 
-  const at = (v, max) => Math.round(Math.min(max, v * stretch)) + '%';
+  // The shadow is a soft ellipse sitting behind the copy block, not a curtain
+  // drawn across the picture. Sides and the far end of the photo stay bright,
+  // and a face placed away from the text stays in full light.
+  const depth = copyDepth(slide);
+  const ry = Math.round((20 + depth * 42) * (size.h >= 1900 ? 0.85 : 1));
 
   if (pos === 'bottom') {
-    return `linear-gradient(to top, ${rgba(s.a)} 0%, ${rgba(s.b)} ${at(30, 52)}, ${rgba(s.c)} ${at(48, 70)}, transparent ${at(62, 86)})`;
+    const cy = 100 - Math.round(ry * 0.72);
+    return `radial-gradient(ellipse 96% ${ry}% at 34% ${cy}%, ${rgba(s.a)} 0%, ${rgba(s.b)} 44%, ${rgba(s.c)} 70%, transparent 92%)`;
   }
   if (pos === 'center') {
-    return `radial-gradient(ellipse 88% ${Math.round(52 * stretch)}% at 50% 50%, ${rgba(s.a)} 0%, ${rgba(s.b)} ${at(42, 60)}, ${rgba(s.c)} ${at(64, 82)}, transparent ${at(82, 96)})`;
+    return `radial-gradient(ellipse 92% ${Math.round(ry * 1.15)}% at 50% 50%, ${rgba(s.a)} 0%, ${rgba(s.b)} 44%, ${rgba(s.c)} 70%, transparent 92%)`;
   }
-  return `linear-gradient(to bottom, ${rgba(s.a)} 0%, ${rgba(s.b)} ${at(28, 50)}, ${rgba(s.c)} ${at(46, 68)}, transparent ${at(60, 84)})`;
+  const cy = 14 + Math.round(ry * 0.66);
+  return `radial-gradient(ellipse 96% ${ry}% at 34% ${cy}%, ${rgba(s.a)} 0%, ${rgba(s.b)} 44%, ${rgba(s.c)} 70%, transparent 92%)`;
 }
 
 // A very dark version of a brand colour, so the scrim feels like the same
@@ -97,7 +103,7 @@ function tokens(brand, sizeKey, slide) {
     fonts: brand.fonts,
     stretch: brand.fonts.heroStretch || 'normal',
     frame: brand.frame !== false,
-    pos: brand.textPosition || 'top',
+    pos: (slide && slide.textPosition) || brand.textPosition || 'top',
     upper: (brand.case || 'sentence') === 'upper',
     scrim: scrimGradient(brand, size, slide),
     wordmark: brand.wordmark || '',
