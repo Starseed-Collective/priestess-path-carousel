@@ -1,4 +1,4 @@
-# Sacred Carousel
+# Priestess Path Carousel
 
 Make Instagram carousels that look like your brand, by talking to Claude Code.
 

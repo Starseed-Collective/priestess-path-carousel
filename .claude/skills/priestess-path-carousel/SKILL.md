@@ -1,9 +1,9 @@
 ---
-name: sacred-carousel
+name: priestess-path-carousel
 description: Build on-brand Instagram carousels and story graphics from photos and copy. Use for "make a carousel", "post graphic", "story version", "slides for my launch".
 ---
 
-# Sacred Carousel
+# Priestess Path Carousel
 
 Make Instagram carousels that look like one brand made them, because one brand did.
 

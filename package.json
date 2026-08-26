@@ -1,5 +1,5 @@
 {
-  "name": "sacred-carousel",
+  "name": "priestess-path-carousel",
   "version": "1.0.0",
   "private": true,
   "description": "Make on-brand Instagram carousels with Claude Code.",
@@ -8,5 +8,7 @@
     "render": "node scripts/screenshot.cjs",
     "check": "node scripts/check-brand.cjs"
   },
-  "dependencies": { "puppeteer": "^25.0.0" }
+  "dependencies": {
+    "puppeteer": "^25.0.0"
+  }
 }
